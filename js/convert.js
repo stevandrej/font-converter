@@ -1,13 +1,13 @@
 //Converter funcion
-const convert = () => {
+const convert = (font) => {
 	let inputText = $("#text-input").val();
 	let outputText = new Array;
 
 	let inputTextChars = inputText.split('');
 
 	inputTextChars.forEach(element => {
-		if (fonts[chosenFont].has(element))
-			outputText.push(fonts[chosenFont].get(element));
+		if (font.has(element))
+			outputText.push(font.get(element));
 		else
 			outputText.push(element);
 	});
